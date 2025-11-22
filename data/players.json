@@ -1,19 +1,19 @@
 {
-  "lastUpdated": "0000-00-00 00:00:00",
+  "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
-    "totalPlayers": 9,
-    "totalMatches": 1,
+    "totalPlayers": 11,
+    "totalMatches": 0,
     "averageParticipants": 0,
     "kFactor": 24,
-    "baseScore": 1000
+    "baseScore": 1000,
+    "participationBonus": 10
   },
   "players": [
     
     {
-      "id": "001",
+      "id": "ID:001",
       "name": "Resrtiloa",
       "avatar": "assets/avatars/001.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -21,10 +21,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "002",
+      "id": "ID:002",
       "name": "九鸟",
       "avatar": "assets/avatars/002.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -32,10 +31,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "003",
+      "id": "ID:003",
       "name": "越级万岁",
       "avatar": "assets/avatars/003.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -43,10 +41,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "004",
+      "id": "ID:004",
       "name": "寿命低于sin30度",
       "avatar": "assets/avatars/004.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -54,10 +51,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "005",
+      "id": "ID:005",
       "name": "底力严重不足的TXY",
       "avatar": "assets/avatars/005.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -65,10 +61,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "006",
+      "id": "ID:006",
       "name": "MC_混凝土",
       "avatar": "assets/avatars/006.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -76,10 +71,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "007",
+      "id": "ID:007",
       "name": "74",
       "avatar": "assets/avatars/007.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -87,10 +81,9 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "008",
+      "id": "ID:008",
       "name": "L.Arisu",
       "avatar": "assets/avatars/008.jpg",  
-      "avatarText": "R",
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -98,10 +91,29 @@
       "lastActive": "2025-11-22"
     },
     {
-      "id": "009",
+      "id": "ID:009",
       "name": "鸽鸽大几把",
       "avatar": "assets/avatars/009.jpg",  
-      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "ID:010",
+      "name": "WindIsland.",
+      "avatar": "assets/avatars/010.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "Administrator",
+      "name": "RnLamsuly",
+      "avatar": "assets/avatars/000.jpg",  
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
@@ -113,10 +125,10 @@
   ],
   "recentMatches": [
     {
-      "date": "0000-00-00",
-      "winner": "RnLamsuly",
+      "date": "Test",
+      "winner": "Test",
       "participants": 0,
-      "type": "测试"
+      "type": "Test"
     }
   ]
 }
