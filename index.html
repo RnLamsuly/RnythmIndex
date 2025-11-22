@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rnythm Index | RnLamsuly 节奏指数</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <div class="container">
+            <h1>Rnythm Index</h1>
+            <p class="subtitle">RnLamsuly节奏指数 - 基于ELO算法的动态积分排名 · 静态网页 · 实时更新</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="dashboard">
+            <div class="main-content">
+                <div class="card">
+                    <h2>🏆 当前排行榜</h2>
+                    <button class="refresh-btn" onclick="app.loadData()">🔄 刷新数据</button>
+                    <div id="leaderboard" class="leaderboard">
+                        <div class="loading">加载中...</div>
+                    </div>
+                    
+                    <div class="stats-grid" id="statsGrid">
+                        <div class="loading">加载统计信息...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>📊 最近比赛</h2>
+                    <div id="recentMatches" class="recent-matches">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="card">
+                    <h2>ℹ️ 系统信息</h2>
+                    <div id="systemInfo">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>🔔 比赛预告</h2>
+                    <div id="nextMatch">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>RnLamsuly开发的音游赛事积分系统 &copy; 2023 | 数据更新时间: <span id="lastUpdated">-</span></p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            app.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+  "lastUpdated": "0000-00-00 00:00:00",
+  "system": {
+    "totalPlayers": 9,
+    "totalMatches": 1,
+    "averageParticipants": 8.4,
+    "kFactor": 24,
+    "baseScore": 1000
+  },
+  "players": [
+    
+    {
+      "id": "001",
+      "name": "Resrtiloa",
+      "avatar": "assets/avatars/001.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "002",
+      "name": "九鸟",
+      "avatar": "assets/avatars/002.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "003",
+      "name": "越级万岁",
+      "avatar": "assets/avatars/003.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "004",
+      "name": "寿命低于sin30度",
+      "avatar": "assets/avatars/004.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "005",
+      "name": "底力严重不足的TXY",
+      "avatar": "assets/avatars/005.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "006",
+      "name": "MC_混凝土",
+      "avatar": "assets/avatars/006.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "007",
+      "name": "74",
+      "avatar": "assets/avatars/007.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "008",
+      "name": "L.Arisu",
+      "avatar": "assets/avatars/008.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    },
+    {
+      "id": "009",
+      "name": "鸽鸽大几把",
+      "avatar": "assets/avatars/009.jpg",  
+      "avatarText": "R",
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-22",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-22"
+    }
+    
+      
+  ],
+  "recentMatches": [
+    {
+      "date": "0000-00-00",
+      "winner": "RnLamsuly",
+      "participants": 0,
+      "type": "测试"
+    }
+  ]
+}
