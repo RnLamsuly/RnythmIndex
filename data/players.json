@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
-    "totalPlayers": 17,
+    "totalPlayers": 18,
     "totalMatches": 18,
     "averageParticipants": 3.22,
     "kFactor": 24,
@@ -179,6 +179,17 @@
       "id": "ID:016",
       "name": "重述",
       "avatar": "assets/avatars/016.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
+      "id": "ID:017",
+      "name": "Tempestissimo.",
+      "avatar": "assets/avatars/017.jpg",  
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-23",
