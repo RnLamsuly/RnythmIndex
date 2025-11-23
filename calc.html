@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rnythm Index - 积分计算器</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    <style>
+        /* 保持原有的CSS样式不变 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ff6b6b, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+        
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            font-size: 1rem;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #a855f7;
+            box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+        }
+        
+        .players-input {
+            margin-top: 20px;
+        }
+        
+        .player-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 50px;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .player-row input {
+            margin-bottom: 0;
+        }
+        
+        .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .remove-btn:hover {
+            background: #c82333;
+        }
+        
+        .add-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .add-btn:hover {
+            background: #218838;
+        }
+        
+        .results-section {
+            margin-top: 30px;
+            display: none;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card h3 {
+            color: #a855f7;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .calculation-details {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .calculation-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 3px solid #a855f7;
+        }
+        
+        .final-scores {
+            font-size: 1.1rem;
+        }
+        
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .score-change {
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #10b981;
+        }
+        
+        .negative {
+            color: #ef4444;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #a855f7;
+        }
+        
+        .instructions h3 {
+            color: #a855f7;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 5px;
+            color: #94a3b8;
+        }
+        
+        .protection-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.2);
+            color: #10b981;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .protection-info {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .protection-info h4 {
+            color: #10b981;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .protection-info p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .debug-info {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 6px;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rnythm Index 积分计算器</h1>
+        <p class="subtitle">基于ELO算法的比赛积分计算工具</p>
+        
+        <div class="instructions">
+            <h3>使用说明</h3>
+            <ul>
+                <li>输入参赛人数和比赛参数</li>
+                <li>按排名从高到低输入玩家ID和当前分数</li>
+                <li>系统会自动计算每个玩家的分数变化</li>
+                <li><strong>新手保护</strong>：低于1000分的部分，扣分减少70%</li>
+                <li>结果包含详细的计算过程和最终分数</li>
+            </ul>
+        </div>
+        
+        <div class="protection-info">
+            <h4>🛡️ 新手保护机制</h4>
+            <p>当玩家分数低于1000分时：<br>
+               - 1000分以上的部分：正常扣分<br>
+               - 1000分以下的部分：扣分减少70%<br>
+               - 加分始终正常计算</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="form-group">
+                <label for="kFactor">K因子（分数变动幅度）:</label>
+                <input type="number" id="kFactor" value="24" min="1" max="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="participationBonus">参与奖励分数（默认为0）:</label>
+                <input type="number" id="participationBonus" value="0" min="0" max="10">
+            </div>
+            
+            <div class="players-input">
+                <label>玩家信息（按排名从高到低输入）:</label>
+                <div id="playersContainer">
+                    <!-- 玩家输入行将通过JavaScript动态生成 -->
+                </div>
+                <button type="button" class="add-btn" onclick="addPlayerRow()">+ 添加玩家</button>
+            </div>
+            
+            <button type="button" onclick="calculateScores()">计算分数变化</button>
+        </div>
+        
+        <div id="resultsSection" class="results-section">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #a855f7;">计算结果</h2>
+            
+            <div class="results-grid">
+                <div class="card">
+                    <h3>📊 详细计算过程</h3>
+                    <div id="calculationDetails" class="calculation-details">
+                        <!-- 计算详情将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🏆 最终分数（按ID排序）</h3>
+                    <div id="finalScores" class="final-scores">
+                        <!-- 最终分数将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+            
+            <button type="button" onclick="resetCalculator()" style="background: #6c757d; margin-top: 20px;">重新计算</button>
+        </div>
+    </div>
+
+    <script>
+        let playerCount = 0;
+        
+        // 初始化玩家输入行
+        function initPlayerRows() {
+            const container = document.getElementById('playersContainer');
+            container.innerHTML = '';
+            playerCount = 0;
+            
+            // 初始添加3个空白玩家输入行
+            for (let i = 0; i < 3; i++) {
+                addPlayerRow();
+            }
+        }
+        
+        // 添加玩家输入行
+        function addPlayerRow() {
+            const container = document.getElementById('playersContainer');
+            playerCount++;
+            
+            const playerRow = document.createElement('div');
+            playerRow.className = 'player-row';
+            playerRow.innerHTML = `
+                <input type="text" placeholder="玩家ID (如: 001)" id="playerId_${playerCount}">
+                <input type="number" placeholder="当前分数" id="playerScore_${playerCount}" value="1000">
+                <button type="button" class="remove-btn" onclick="removePlayerRow(this)">×</button>
+            `;
+            
+            container.appendChild(playerRow);
+        }
+        
+        // 移除玩家输入行
+        function removePlayerRow(button) {
+            const row = button.parentElement;
+            row.remove();
+            playerCount--;
+        }
+        
+        // 计算预期胜率
+        function calculateExpectedScore(playerScore, opponentScore) {
+            return 1.0 / (1.0 + Math.pow(10.0, (opponentScore - playerScore) / 400.0));
+        }
+        
+        // 应用新手保护机制 - 修正版本：只保护低于1000分的部分
+        function applyNewbieProtection(oldScore, calculatedChange) {
+            const BASE_SCORE = 1000;
+            const PROTECTION_RATE = 0.3; // 30%的扣分（减少70%）
+    
+            // 如果是加分，不应用保护
+            if (calculatedChange >= 0) {
+                return {
+                    finalChange: calculatedChange,
+                    protectionApplied: false,
+                    originalChange: calculatedChange,
+                    reduction: 0,
+                    aboveBaseAmount: 0,
+                    belowBaseAmount: 0
+                };
+            }
+    
+    // 计算新分数
+            const newScore = oldScore + calculatedChange;
+    
+    // 如果新分数 >= 1000，说明没有触及1000分以下的部分，不应用保护
+            if (newScore >= BASE_SCORE) {
+                return {
+                    finalChange: calculatedChange,
+                    protectionApplied: false,
+                    originalChange: calculatedChange,
+                    reduction: 0,
+                    aboveBaseAmount: calculatedChange,
+                    belowBaseAmount: 0
+                };
+            }
+    
+            // 计算各部分扣分
+            const aboveBaseAmount = BASE_SCORE - oldScore; // 1000分以上部分的扣分
+            const belowBaseAmount = newScore - BASE_SCORE; // 1000分以下部分的扣分（负数）
+    
+            // 保护计算：1000分以上正常扣分，1000分以下减少70%
+            const protectedBelowAmount = Math.round(belowBaseAmount * PROTECTION_RATE);
+            const finalChange = aboveBaseAmount + protectedBelowAmount;
+    
+            console.log(`保护计算: 原分数=${oldScore}, 原变化=${calculatedChange}`);
+            console.log(`1000分以上扣分: ${aboveBaseAmount}, 1000分以下扣分: ${belowBaseAmount}`);
+            console.log(`保护后1000分以下扣分: ${protectedBelowAmount}, 最终变化: ${finalChange}`);
+    
+           return {
+                finalChange: finalChange,
+                protectionApplied: true,
+                originalChange: calculatedChange,
+                reduction: calculatedChange - finalChange,
+                aboveBaseAmount: aboveBaseAmount,
+                belowBaseAmount: belowBaseAmount,
+               protectedBelowAmount: protectedBelowAmount
+            };
+        }
+        
+        // 计算分数变化
+        function calculateScores() {
+            const kFactor = parseInt(document.getElementById('kFactor').value);
+            const participationBonus = parseInt(document.getElementById('participationBonus').value);
+            
+            // 收集玩家数据
+            const players = [];
+            const playerInputs = document.querySelectorAll('.player-row');
+            
+            for (let i = 0; i < playerInputs.length; i++) {
+                const row = playerInputs[i];
+                const id = row.querySelector('input[type="text"]').value;
+                const score = parseInt(row.querySelector('input[type="number"]').value);
+                
+                if (id && !isNaN(score)) {
+                    players.push({ id, score, rank: i });
+                }
+            }
+            
+            if (players.length < 2) {
+                alert('请至少输入2名玩家的信息！');
+                return;
+            }
+            
+            const n = players.length;
+            const scoreChanges = {};
+            const protectionInfo = {};
+            const calculationDetails = [];
+            
+            // 计算每个玩家的分数变化
+            for (let i = 0; i < n; i++) {
+                const player = players[i];
+                const actualScore = n - player.rank - 1;
+                
+                let expectedScore = 0.0;
+                for (let j = 0; j < n; j++) {
+                    if (j !== i) {
+                        expectedScore += calculateExpectedScore(player.score, players[j].score);
+                    }
+                }
+                
+                // 计算基础分数变化
+                const baseScoreChange = Math.round(kFactor * (actualScore - expectedScore));
+                
+                // 应用新手保护机制
+                const protectionResult = applyNewbieProtection(player.score, baseScoreChange);
+                
+                scoreChanges[player.id] = protectionResult.finalChange;
+                protectionInfo[player.id] = protectionResult;
+                
+                calculationDetails.push({
+                    id: player.id,
+                    oldScore: player.score,
+                    rank: player.rank + 1,
+                    actualScore,
+                    expectedScore,
+                    baseScoreChange,
+                    finalScoreChange: protectionResult.finalChange,
+                    protectionApplied: protectionResult.protectionApplied,
+                    originalChange: protectionResult.originalChange,
+                    reduction: protectionResult.reduction,
+                    protectedAmount: protectionResult.protectedAmount,
+                    normalAmount: protectionResult.normalAmount,
+                    belowBase: protectionResult.belowBase,
+                    protectedRatio: protectionResult.protectedRatio
+                });
+            }
+            
+            // 显示结果
+            displayResults(players, scoreChanges, protectionInfo, calculationDetails, participationBonus);
+        }
+        
+        // 显示计算结果
+        function displayResults(players, scoreChanges, protectionInfo, calculationDetails, participationBonus) {
+            const resultsSection = document.getElementById('resultsSection');
+            const calculationDetailsDiv = document.getElementById('calculationDetails');
+            const finalScoresDiv = document.getElementById('finalScores');
+            
+            // 显示计算详情
+            calculationDetailsDiv.innerHTML = '';
+            calculationDetails.forEach(detail => {
+                const detailDiv = document.createElement('div');
+                detailDiv.className = 'calculation-item';
+                
+                let protectionText = '';
+                if (detail.protectionApplied) {
+                    protectionText = `
+                        <div class="debug-info">
+                            🛡️ 分段保护生效！<br>
+                        </div>
+                    `;
+                }
+                
+                detailDiv.innerHTML = `
+                    <strong>${detail.id}</strong> (原分数:${detail.oldScore}, 排名:${detail.rank}):<br>
+                    实际得分: ${detail.actualScore}, 预期得分: ${detail.expectedScore.toFixed(2)}<br>
+                    基础变化: ${detail.baseScoreChange >= 0 ? '+' : ''}${detail.baseScoreChange}<br>
+                    最终变化: <span class="score-change ${detail.finalScoreChange >= 0 ? 'positive' : 'negative'}">${detail.finalScoreChange >= 0 ? '+' : ''}${detail.finalScoreChange}</span>
+                    ${protectionText}
+                `;
+                calculationDetailsDiv.appendChild(detailDiv);
+            });
+            
+            // 显示最终分数（按ID排序）
+            const sortedPlayers = [...players].sort((a, b) => a.id.localeCompare(b.id));
+            finalScoresDiv.innerHTML = '';
+            
+            sortedPlayers.forEach(player => {
+                const oldScore = player.score;
+                const change = scoreChanges[player.id];
+                const protection = protectionInfo[player.id];
+                const newScore = oldScore + change + participationBonus;
+                
+                const scoreDiv = document.createElement('div');
+                scoreDiv.className = 'score-item';
+                
+                let protectionBadge = '';
+                if (protection.protectionApplied) {
+                    protectionBadge = '<span class="protection-badge">🛡️ 分段保护</span>';
+                }
+                
+                scoreDiv.innerHTML = `
+                    <span>${player.id} ${protectionBadge}</span>
+                    <span>
+                        ${oldScore} → <strong>${newScore}</strong>
+                        <span class="score-change ${change >= 0 ? 'positive' : 'negative'}">
+                            (${change >= 0 ? '+' : ''}${change} + ${participationBonus})
+                        </span>
+                    </span>
+                `;
+                finalScoresDiv.appendChild(scoreDiv);
+            });
+            
+            // 显示结果区域
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 重置计算器
+        function resetCalculator() {
+            document.getElementById('kFactor').value = 24;
+            document.getElementById('participationBonus').value = 0;
+            initPlayerRows();
+            document.getElementById('resultsSection').style.display = 'none';
+        }
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', initPlayerRows);
+    </script>
+</body>
+</html>

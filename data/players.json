@@ -2,8 +2,8 @@
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
     "totalPlayers": 16,
-    "totalMatches": 11,
-    "averageParticipants": 3.45,
+    "totalMatches": 18,
+    "averageParticipants": 3.22,
     "kFactor": 24,
     "baseScore": 1000,
     "participationBonus": 10
@@ -25,10 +25,10 @@
       "id": "ID:002",
       "name": "九鸟",
       "avatar": "assets/avatars/002.jpg",  
-      "score": 975,
-      "scoreChange": -25,
+      "score": 1002,
+      "scoreChange": 2,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 7,
+      "matchesPlayed": 8,
       "lastActive": "2025-11-23",
       "Permission": 3
     },
@@ -36,10 +36,10 @@
       "id": "ID:003",
       "name": "越级万岁",
       "avatar": "assets/avatars/003.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 996,
+      "scoreChange": -4,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
+      "matchesPlayed": 1,
       "lastActive": "2025-11-22",
       "Permission": 3
     },
@@ -69,11 +69,11 @@
       "id": "ID:006",
       "name": "MC_混凝土",
       "avatar": "assets/avatars/006.jpg",  
-      "score": 1006,
-      "scoreChange": 6,
+      "score": 990,
+      "scoreChange": -10,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 11,
-      "lastActive": "2025-11-22",
+      "matchesPlayed": 14,
+      "lastActive": "2025-11-23",
       "Permission": 2
     },
     {
@@ -146,10 +146,10 @@
       "id": "ID:013",
       "name": "ChoNmau",
       "avatar": "assets/avatars/013.jpg",  
-      "score": 1010,
-      "scoreChange": 10,
+      "score": 1022,
+      "scoreChange": 22,
       "joinDate": "2025-11-23",
-      "matchesPlayed": 3,
+      "matchesPlayed": 9,
       "lastActive": "2025-11-23",
       "Permission": 3
     },
@@ -157,10 +157,10 @@
       "id": "ID:014",
       "name": "cy001☆赤御",
       "avatar": "assets/avatars/014.jpg",  
-      "score": 1066,
-      "scoreChange": 66,
+      "score": 1076,
+      "scoreChange": 76,
       "joinDate": "2025-11-23",
-      "matchesPlayed": 2,
+      "matchesPlayed": 6,
       "lastActive": "2025-11-23",
       "Permission": 3
     },
@@ -179,17 +179,58 @@
       "id": "Administrator",
       "name": "RnLamsuly",
       "avatar": "assets/avatars/000.jpg",  
-      "score": 1058,
-      "scoreChange": 58,
+      "score": 1118,
+      "scoreChange": 118,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 1,
+      "matchesPlayed": 5,
       "lastActive": "2025-11-23",
       "Permission": 1
     }
     
       
   ],
-  "recentMatches": [
+  "recentMatches": [{
+      "date": "2025-11-23",
+      "winner": "九鸟",
+      "participants": 3,
+      "type": "a truth seeker -Communication with Utopia will be lost- IN Lv.15"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "cy001☆赤御",
+      "participants": 3,
+      "type": "QZKago Requiem AT Lv.17"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "RnLamsuly",
+      "participants": 2,
+      "type": "NO x IN Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "RnLamsuly",
+      "participants": 3,
+      "type": "PRAGMATISM-RESURRECTION- AT Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "ChoNmau",
+      "participants": 2,
+      "type": "PRAGMATISM-RESURRECTION- IN Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "RnLamsuly",
+      "participants": 3,
+      "type": "DESTRUCTION 3,2,1 AT Lv.17"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "RnLamsuly",
+      "participants": 4,
+      "type": "AbsoluTe DisoRdeR AT Lv.17"
+    },
     {
       "date": "2025-11-23",
       "winner": "cy001☆赤御",
