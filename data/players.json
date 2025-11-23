@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
-    "totalPlayers": 11,
+    "totalPlayers": 12,
     "totalMatches": 0,
     "averageParticipants": 0,
     "kFactor": 24,
@@ -109,6 +109,16 @@
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
       "lastActive": "2025-11-22"
+    },
+    {
+      "id": "ID:011",
+      "name": "zhanwai",
+      "avatar": "assets/avatars/011.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23"
     },
     {
       "id": "Administrator",
