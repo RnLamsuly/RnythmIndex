@@ -198,6 +198,28 @@
       "Permission": 3
     },
     {
+      "id": "ID:018",
+      "name": "四不人",
+      "avatar": "assets/avatars/018.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
+      "id": "ID:018",
+      "name": "lxm59_",
+      "avatar": "assets/avatars/019.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
       "id": "Administrator",
       "name": "RnLamsuly",
       "avatar": "assets/avatars/000.jpg",  
