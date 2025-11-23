@@ -176,6 +176,17 @@
       "Permission": 3
     },
     {
+      "id": "ID:016",
+      "name": "重述",
+      "avatar": "assets/avatars/016.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
       "id": "Administrator",
       "name": "RnLamsuly",
       "avatar": "assets/avatars/000.jpg",  
