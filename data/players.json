@@ -1,9 +1,9 @@
 {
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
-    "totalPlayers": 13,
-    "totalMatches": 7,
-    "averageParticipants": 4.0,
+    "totalPlayers": 16,
+    "totalMatches": 11,
+    "averageParticipants": 3.45,
     "kFactor": 24,
     "baseScore": 1000,
     "participationBonus": 10
@@ -69,10 +69,10 @@
       "id": "ID:006",
       "name": "MC_混凝土",
       "avatar": "assets/avatars/006.jpg",  
-      "score": 996,
-      "scoreChange": -4,
+      "score": 1006,
+      "scoreChange": 6,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 7,
+      "matchesPlayed": 11,
       "lastActive": "2025-11-22",
       "Permission": 2
     },
@@ -143,6 +143,39 @@
       "Permission": 3
     },
     {
+      "id": "ID:013",
+      "name": "ChoNmau",
+      "avatar": "assets/avatars/013.jpg",  
+      "score": 1010,
+      "scoreChange": 10,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 3,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
+      "id": "ID:014",
+      "name": "cy001☆赤御",
+      "avatar": "assets/avatars/014.jpg",  
+      "score": 1066,
+      "scoreChange": 66,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 2,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
+      "id": "ID:015",
+      "name": "tankao",
+      "avatar": "assets/avatars/015.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23",
+      "Permission": 3
+    },
+    {
       "id": "Administrator",
       "name": "RnLamsuly",
       "avatar": "assets/avatars/000.jpg",  
@@ -157,6 +190,30 @@
       
   ],
   "recentMatches": [
+    {
+      "date": "2025-11-23",
+      "winner": "cy001☆赤御",
+      "participants": 3,
+      "type": "Poison AND÷OR Affection IN Lv.15"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "MC_混凝土",
+      "participants": 2,
+      "type": "NightTheater IN Lv.14"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "ChoNmau",
+      "participants": 3,
+      "type": "S.A.T.E.L.L.I.T.E. AT Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "cy001☆赤御",
+      "participants": 2,
+      "type": "もぺもぺ AT Lv.15"
+    },
     {
       "date": "2025-11-23",
       "winner": "鸽鸽大几把",
