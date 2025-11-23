@@ -18,7 +18,8 @@
       "scoreChange": 113,
       "joinDate": "2025-11-22",
       "matchesPlayed": 6,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "ID:002",
@@ -28,7 +29,8 @@
       "scoreChange": -25,
       "joinDate": "2025-11-22",
       "matchesPlayed": 7,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "ID:003",
@@ -38,7 +40,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 3
     },
     {
       "id": "ID:004",
@@ -48,7 +51,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 3
     },
     {
       "id": "ID:005",
@@ -58,7 +62,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 3
     },
     {
       "id": "ID:006",
@@ -68,7 +73,8 @@
       "scoreChange": -4,
       "joinDate": "2025-11-22",
       "matchesPlayed": 7,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 2
     },
     {
       "id": "ID:007",
@@ -78,7 +84,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 7,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "ID:008",
@@ -88,7 +95,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 3
     },
     {
       "id": "ID:009",
@@ -98,7 +106,8 @@
       "scoreChange": 133,
       "joinDate": "2025-11-22",
       "matchesPlayed": 7,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "ID:010",
@@ -108,7 +117,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-22",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "lastActive": "2025-11-22",
+      "Permission": 3
     },
     {
       "id": "ID:011",
@@ -118,7 +128,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-23",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "ID:012",
@@ -128,7 +139,8 @@
       "scoreChange": 0,
       "joinDate": "2025-11-23",
       "matchesPlayed": 0,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 3
     },
     {
       "id": "Administrator",
@@ -138,7 +150,8 @@
       "scoreChange": 58,
       "joinDate": "2025-11-22",
       "matchesPlayed": 1,
-      "lastActive": "2025-11-23"
+      "lastActive": "2025-11-23",
+      "Permission": 1
     }
     
       

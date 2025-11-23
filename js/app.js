@@ -71,7 +71,7 @@ const app = {
                             <div class="avatar" style="${avatarHtml ? 'display:none;' : ''}">${avatarText}</div>
                         </div>
                         <div>
-                            <div class="player-name">${player.name}</div>
+                            <div class="player-name permission-${player.Permission || 3}">${player.name}</div>
                             <div class="player-id">${player.id} • ${player.matchesPlayed}场</div>
                         </div>
                     </div>

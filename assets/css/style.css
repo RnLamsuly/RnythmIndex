@@ -267,3 +267,18 @@ footer {
     border-radius: 8px;
     backdrop-filter: blur(10px);
 }
+
+/* 权限颜色样式 */
+.player-name.permission-1 {
+    color: #ff6b6b !important; /* 管理员红色 */
+    font-weight: bold;
+}
+
+.player-name.permission-2 {
+    color: #a855f7 !important; /* 操作员紫色 */
+    font-weight: 600;
+}
+
+.player-name.permission-3 {
+    color: #e2e8f0 !important; /* 用户白色 */
+}
