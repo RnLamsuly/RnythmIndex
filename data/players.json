@@ -2,10 +2,10 @@
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
     "totalPlayers": 12,
-    "totalMatches": 0,
-    "averageParticipants": 0,
+    "totalMatches": 7,
+    "averageParticipants": 4.0,
     "kFactor": 24,
-    "baseScore": 1000,
+    "baseScore": 1133,
     "participationBonus": 10
   },
   "players": [
@@ -14,21 +14,21 @@
       "id": "ID:001",
       "name": "Resrtiloa",
       "avatar": "assets/avatars/001.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 1113,
+      "scoreChange": 113,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "matchesPlayed": 6,
+      "lastActive": "2025-11-23"
     },
     {
       "id": "ID:002",
       "name": "九鸟",
       "avatar": "assets/avatars/002.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 975,
+      "scoreChange": -25,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "matchesPlayed": 7,
+      "lastActive": "2025-11-23"
     },
     {
       "id": "ID:003",
@@ -64,10 +64,10 @@
       "id": "ID:006",
       "name": "MC_混凝土",
       "avatar": "assets/avatars/006.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 996,
+      "scoreChange": -4,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
+      "matchesPlayed": 7,
       "lastActive": "2025-11-22"
     },
     {
@@ -77,8 +77,8 @@
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "matchesPlayed": 7,
+      "lastActive": "2025-11-23"
     },
     {
       "id": "ID:008",
@@ -94,11 +94,11 @@
       "id": "ID:009",
       "name": "鸽鸽大几把",
       "avatar": "assets/avatars/009.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 1133,
+      "scoreChange": 133,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "matchesPlayed": 7,
+      "lastActive": "2025-11-23"
     },
     {
       "id": "ID:010",
@@ -124,21 +124,57 @@
       "id": "Administrator",
       "name": "RnLamsuly",
       "avatar": "assets/avatars/000.jpg",  
-      "score": 1000,
-      "scoreChange": 0,
+      "score": 1058,
+      "scoreChange": 58,
       "joinDate": "2025-11-22",
-      "matchesPlayed": 0,
-      "lastActive": "2025-11-22"
+      "matchesPlayed": 1,
+      "lastActive": "2025-11-23"
     }
     
       
   ],
   "recentMatches": [
     {
-      "date": "Test",
-      "winner": "Test",
-      "participants": 0,
-      "type": "Test"
+      "date": "2025-11-23",
+      "winner": "鸽鸽大几把",
+      "participants": 3,
+      "type": "BANGING STRIKE IN Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "Resrtiloa",
+      "participants": 4,
+      "type": "Antithese AT Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "鸽鸽大几把",
+      "participants": 4,
+      "type": "狂喜兰舞 AT Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "鸽鸽大几把",
+      "participants": 4,
+      "type": "QZKago Requiem AT Lv.17"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "鸽鸽大几把",
+      "participants": 4,
+      "type": "Infinite Enercy -Overdoze- AT Lv.16"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "Resrtiloa",
+      "participants": 4,
+      "type": "Igallta AT Lv.17"
+    },
+    {
+      "date": "2025-11-23",
+      "winner": "RnLamsuly",
+      "participants": 5,
+      "type": "ATHAZA AT Lv.16"
     }
   ]
 }
