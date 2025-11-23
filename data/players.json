@@ -1,7 +1,7 @@
 {
   "lastUpdated": "2025-11-23T00:00:00Z",
   "system": {
-    "totalPlayers": 12,
+    "totalPlayers": 13,
     "totalMatches": 7,
     "averageParticipants": 4.0,
     "kFactor": 24,
@@ -114,6 +114,16 @@
       "id": "ID:011",
       "name": "zhanwai",
       "avatar": "assets/avatars/011.jpg",  
+      "score": 1000,
+      "scoreChange": 0,
+      "joinDate": "2025-11-23",
+      "matchesPlayed": 0,
+      "lastActive": "2025-11-23"
+    },
+    {
+      "id": "ID:012",
+      "name": "You.sushan",
+      "avatar": "assets/avatars/012.jpg",  
       "score": 1000,
       "scoreChange": 0,
       "joinDate": "2025-11-23",
